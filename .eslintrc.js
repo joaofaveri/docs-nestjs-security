@@ -16,7 +16,15 @@ module.exports = {
     node: true,
     jest: true,
   },
-  ignorePatterns: ['.eslintrc.js', 'requests.http'],
+  ignorePatterns: [
+    '.eslintrc.js',
+    'requests.http',
+    '*.prisma',
+    '*.toml',
+    '*.sql',
+    '*.db-journal',
+    '*.db',
+  ],
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
