@@ -1,14 +1,6 @@
-import { AuthService } from './auth/auth.service';
-import { ValidateUserDto } from './auth/dto/validate-user.dto';
-import {
-  Body,
-  Controller,
-  Get,
-  Post,
-  Request,
-  UseGuards,
-} from '@nestjs/common';
+import { Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
+import { AuthService } from './auth/auth.service';
 import { LocalAuthGuard } from './auth/local-auth.guard';
 
 @Controller()
