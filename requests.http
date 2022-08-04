@@ -5,7 +5,7 @@ POST http://localhost:3000/user
 Content-Type: application/json
 
 {
-  "username": "beltrano",
+  "username": "outrano",
   "password": "123456"
 }
 
@@ -15,7 +15,7 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "username": "beltrano",
+  "username": "outrano",
   "password": "123456"
 }
 
@@ -27,4 +27,4 @@ GET http://localhost:3000/profile
 
 GET http://localhost:3000/profile
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJlbHRyYW5vIiwic3ViIjozLCJpYXQiOjE2NTk1NTM0MTN9.POMzRajUvucW_3x-0Oxqds_z_J0sebK9bHtuyRdQcEQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im91dHJhbm8iLCJzdWIiOjQsImlhdCI6MTY1OTU4NzY2OX0.NAKn_TvrvA9E_t5na-exOHNnebBcRVZlpZEEWsKP7FY
