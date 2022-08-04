@@ -1,3 +1,4 @@
+import { GoogleAuthGuard } from './auth/google-auth.guard';
 import { JwtAuthGuard } from './auth/jwt-auth.guard';
 import { Controller, Get, Post, Request, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
@@ -26,5 +27,17 @@ export class AppController {
   @Get('profile')
   async getProfile(@Request() request) {
     return request.user;
+  }
+
+  @UseGuards(GoogleAuthGuard)
+  @Get('google')
+  async googleAuth(@Request() request) {
+    return request;
+  }
+
+  @UseGuards(GoogleAuthGuard)
+  @Get('redirect')
+  async googleAuthRedirect(@Request() request) {
+    return this.authService.loginGoogle(request);
   }
 }

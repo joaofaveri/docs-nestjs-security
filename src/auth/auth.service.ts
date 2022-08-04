@@ -38,4 +38,16 @@ export class AuthService {
       }),
     };
   }
+
+  async loginGoogle(request) {
+    if (!request.user) {
+      return {
+        message: 'No user from Google',
+      };
+    }
+    return {
+      message: 'User information from Google',
+      info: request.user,
+    };
+  }
 }
